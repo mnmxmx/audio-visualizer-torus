@@ -18,7 +18,7 @@ The demo of audio visualizer using cubic spline interpolation.
 ```
 
 ## How to play the music  
-* Open your local file from the upper left button "CHOOSE YOUR  MP3 FILE".
+* Open your local file from the upper left button "CHOOSE A MP3 FILE".
 
 
 
