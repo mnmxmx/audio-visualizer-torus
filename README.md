@@ -10,7 +10,7 @@ The demo of audio visualizer using cubic spline interpolation.
 
 ## Usage  
 * Clone repository  
-* Install Node.js (>=5.3)  
+* Install Node.js  
 * Run following commands  
 ```
   npm install  
