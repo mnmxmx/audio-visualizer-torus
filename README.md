@@ -5,8 +5,8 @@ The demo of audio visualizer using cubic spline interpolation.
 
 * [demo](https://mnmxmx.github.io/audio-visualizer-torus/dst/)  
 * about [cubic spline interpolation](http://www.paulinternet.nl/?page=bicubic)  
-![screenshot](./screenshot2.png)  
-![screenshot](./screenshot1.png)  
+[<img src="./screenshot2.png" width="50%">](./screenshot2.png) 
+[<img src="./screenshot1.png" width="50%">](./screenshot2.png) 
 
 ## Usage  
 * Clone repository  
@@ -17,7 +17,8 @@ The demo of audio visualizer using cubic spline interpolation.
   npm start  
 ```
 
-
+## How to play the music  
+* Open your local file from the upper left button "CHOOSE YOUR  MP3 FILE".
 
 
 
