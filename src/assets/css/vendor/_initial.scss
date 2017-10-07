@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+// -------------------- from reset.css
+html,
+body, article, section, nav, aside,
+h1, h2, h3, h4, h5, h6,
+header, footer, address,
+p, ol, ul, li, dl, dt, dd, div,
+a, strong, small, sup, sup, span,
+img, iframe, embed, object, video, audio,
+table, tr, td, th,
+canvas,
+svg {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+html {
+  cursor: default;
+  line-height: 1;
+
+  // http://ultimate-ez.com/2014/03/29/3572/
+  // http://xxmiz0rexx.tumblr.com/post/73393990520/webkit-text-size-adjust-100%E3%81%8C%E5%8A%B9%E3%81%8B%E3%81%AA%E3%81%8F%E3%81%A6%E7%84%A6%E3%81%A3%E3%81%9F
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  &.windows{
+    -webkit-font-smoothing: antialiased;
+  }
+  
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+  font-family: arial;
+}
+
+
+
+// -------------------- from sanitize.css
+// https://developer.mozilla.org/ja/docs/Web/CSS/::selection
+//::-moz-selection,
+//::selection {
+//  background-color: #ccc;
+//  color: #000;
+//  text-shadow: none;
+//}
+
+::-moz-selection {
+  background-color: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+
+
+// -------------------- from reset.css
+ol, ul {
+  list-style: none;
+}
+
+
+
+// -------------------- from reset.css / sanitize.css
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+// -------------------- from reset.css / normalize.css / sanitize.css
+article, section, nav, aside, 
+header, footer {
+  display: block;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+video, audio,
+canvas {
+  display: inline-block;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+strong {
+  font-weight: inherit;
+}
+strong {
+  font-weight: bolder;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -.25em;
+}
+sup {
+  top: -.5em;
+}
+
+
+
+// -------------------- from sanitize.css
+
+// http://www.02320.net/how-to-fill-svg-by-css/
+svg {
+  fill: currentColor;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+svg:not(:root) {
+  overflow: hidden;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+a {
+  background-color: transparent;
+
+  // https://css-tricks.com/almanac/properties/t/text-decoration-skip/
+  -webkit-text-decoration-skip: objects;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+
+
+// -------------------- from normalize.css / sanitize.css
+// http://lealog.hateblo.jp/entry/2015/02/19/124748
+a {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}

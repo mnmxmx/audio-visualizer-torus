@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+@import "vendor/initial";
+
+@import "vendor/easing";
+
+@import "vendor/util";
+
+body{
+  // background: linear-gradient(90deg, #000, #b7d3dc);
+}
+
+.stats{
+  position:absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+.file{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  // background: rgba(255, 255, 255, 0.2);
+
+  letter-spacing: 0.01em;
+  color: #000;
+  cursor: pointer;
+  transition: opacity .4s;
+
+  font-size: 12px;
+  padding: 15px 30px;
+  letter-spacing: 0.15em;
+  // display: none;
+  // opacity: 0;
+
+  &.isHidden{
+    display: none;
+  }
+  
+  // &:hover{
+  //   opacity: .8;
+  // }
+  
+  input{
+    display: none;
+  }
+}
+
+// .bg{
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background: #123;
+//   z-index: 1;
+
+// }
+
+// .wrapper > canvas{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 2;
+// }
