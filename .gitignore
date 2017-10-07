@@ -50,5 +50,5 @@ pull.php
 
 #dev
 build/*
-dst/*
+#dst/*
 build/deploy/
