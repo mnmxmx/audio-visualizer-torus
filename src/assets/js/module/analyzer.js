@@ -117,7 +117,7 @@ class Analyzer{
     let targetFrequency = (this.controls.props.isCubic) ? this.cubic(mu, p0, p1, p2, p3) : this.linear(mu, p1, p2);
 
     targetFrequency = Math.max(0, targetFrequency);
-    this.frequencyArray.push(targetFrequency * this.controls.props.scaleSize);
+    this.frequencyArray.push(targetFrequency * this.controls.props.scaleSize / 10);
   }
 
   cubic(mu, p0, p1, p2, p3){
