@@ -1,7 +1,7 @@
 class Audio{
   constructor(webgl){
-  	this.webgl = webgl;
-  	// this.torus = this.webgl.torus;
+    this.webgl = webgl;
+    this.torus = this.webgl.torus;
     this.audioContext = (window.AudioContext) ? new AudioContext : new webkitAudioContext;
     this.fileReader  = new FileReader;
     this.isReady = false;
@@ -9,7 +9,7 @@ class Audio{
   }
 
   init(){
-  	this.analyzer = new Analyzer(this, 0.8, 3.5);
+    this.analyzer = new Analyzer(this, 0.8, 3.5);
     
     this.render();
     
@@ -48,8 +48,8 @@ class Audio{
 
 
   render(){
-  	this.analyzer.update();
-  	this.webgl.render();
-  	requestAnimationFrame(this.render.bind(this));
+    this.analyzer.update();
+    this.webgl.render();
+    requestAnimationFrame(this.render.bind(this));
   };
 }

@@ -1,6 +1,6 @@
 class Analyzer{
   constructor(audio, smoothTime, scale){
-  	this.audio = audio;
+    this.audio = audio;
     this.controls = new Controls(this);
 
     this.scale = scale;
@@ -26,7 +26,7 @@ class Analyzer{
 
 
   setRange(){
-    this.minHz = this.controls.props.start;
+    this.minHz = 1;
     this.maxHz = this.controls.props.end;
 
     this.sourceStart = Math.ceil(this.frequencyNum * this.minHz / this.hz);
@@ -54,7 +54,7 @@ class Analyzer{
 
 
   update(){
-  	this.frequencyArray = [];
+    this.frequencyArray = [];
     
     var spectrums = new Float32Array(this.frequencyNum);
 
@@ -86,19 +86,19 @@ class Analyzer{
 
 
   createArray(num, interval, isReverse){
-	  if(!isReverse){
-	  	for(let i = 0; i < num; i++){
-	  		this.calcFrequency(num, interval, i);
-	    }
-	  } else {
-	  	for(let i = num - 1; i >= 0; i--){
-	  		this.calcFrequency(num, interval, i);
-	    }
-	  }
+    if(!isReverse){
+      for(let i = 0; i < num; i++){
+        this.calcFrequency(num, interval, i);
+      }
+    } else {
+      for(let i = num - 1; i >= 0; i--){
+        this.calcFrequency(num, interval, i);
+      }
+    }
   }
 
   calcFrequency(num, interval, i){
-  	let n1 = Math.floor(i * interval);
+    let n1 = Math.floor(i * interval);
     let n2 = n1 + 1;
     let n0 = Math.abs(n1 - 1);
     let n3 = n1 + 2;
