@@ -114,10 +114,10 @@ class Analyzer{
     
     let mu = i * interval - n1;
     
-    let targetFrequency = this.cubic(mu, p0, p1, p2, p3);
+    let targetFrequency = (this.controls.props.isCubic) ? this.cubic(mu, p0, p1, p2, p3) : this.linear(mu, p1, p2);
 
     targetFrequency = Math.max(0, targetFrequency);
-    this.frequencyArray.push(targetFrequency / this.level);
+    this.frequencyArray.push(targetFrequency * this.controls.props.scaleSize);
   }
 
   cubic(mu, p0, p1, p2, p3){
@@ -128,6 +128,10 @@ class Analyzer{
     let a2 = -0.5 * p0 + 0.5 * p2;
 
     return a0 * mu * mu2 + a1 * mu2 + a2 * mu + p1;
+  }
+
+  linear(mu, p1, p2){
+    return p1 * (1 - mu) + p2 * mu;
   }
 
 }
