@@ -5,7 +5,7 @@ class Controls{
       // start: 1,
       end: 700,
       isCubic: true,
-      scaleSize: 1/5 * 10
+      scaleSize: 2.7
     };
     this.init();
   }
