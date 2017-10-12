@@ -85,11 +85,11 @@ class Webgl{
     this.setProps();
 
     this.camera = new THREE.PerspectiveCamera(this.props.fov, this.props.aspect, this.props.near, this.props.far);
-    var cameraZ = (this.props.height / 2) / Math.tan((45 * Math.PI / 180) / 2);
+    // var cameraZ = (this.props.height / 2) / Math.tan((45 * Math.PI / 180) / 2);
 
-    this.camera.position.set(0, 0, cameraZ/1.8);
+    // this.camera.position.set(0, cameraZ/1.8, 0);
 
-    this.camera.lookAt(this.scene.position);
+    // this.camera.lookAt(this.scene.position);
 
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
@@ -146,7 +146,7 @@ class Webgl{
 
     var cameraZ = (this.props.height / 2) / Math.tan((this.props.fov * Math.PI / 180) / 2);
 
-    this.camera.position.set(0, 0, cameraZ/1.8);
+    this.camera.position.set(0, -cameraZ/1.8, -cameraZ/5.0);
     
     this.camera.lookAt(this.scene.position);
 

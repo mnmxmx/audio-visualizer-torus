@@ -66,5 +66,5 @@ void main(){
   color -= vec3(colorOffset) * vec3(-0.3, -1.0, 1.2);
 
 
-  gl_FragColor = vec4(color, 0.95);
+  gl_FragColor = vec4(color + 0.1, 0.95);
 }
