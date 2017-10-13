@@ -113,8 +113,19 @@ class Analyzer{
     let p3 = this.adjustFrequency(n3, this.avr);
     
     let mu = i * interval - n1;
-    
-    let targetFrequency = (this.controls.props.isCubic) ? this.cubic(mu, p0, p1, p2, p3) : this.linear(mu, p1, p2);
+
+    let targetFrequency;
+
+    // interpolation
+    if(this.controls.props.isCubic){
+      targetFrequency = this.cubic(mu, p0, p1, p2, p3);
+    } else if(this.controls.props.isLinear){
+      targetFrequency = this.linear(mu, p1, p2);
+    } else if(this.controls.props.isNo){
+      targetFrequency = p1;
+    } else if(this.controls.props.isCosine){
+      targetFrequency = this.cosine(mu, p1, p2);
+    }
 
     targetFrequency = Math.max(0, targetFrequency);
     this.frequencyArray.push(targetFrequency * this.controls.props.scaleSize / 10);
@@ -133,5 +144,35 @@ class Analyzer{
   linear(mu, p1, p2){
     return p1 * (1 - mu) + p2 * mu;
   }
+
+  cosine(mu, p1, p2){
+     let mu2;
+
+     mu2 = (1 - Math.cos( mu * Math.PI)) / 2;
+     return (p1 * (1 - mu2) + p2 * mu2);
+  }
+
+  // hermite(mu, p0, p1, p2, p3){
+  //   const tension = 0;
+  //   const bias = 0;
+
+  //   let m0,m1,mu2,mu3;
+  //   let a0,a1,a2,a3;
+
+  //   mu2 = mu * mu;
+  //   mu3 = mu2 * mu;
+
+  //   m0  = (p1 - p0) * (1 + bias) * (1 - tension) / 2;
+  //   m0 += (p2 - p1) * (1 - bias) * (1 - tension) / 2;
+  //   m1  = (p2 - p1) * (1 + bias) * (1 - tension) / 2;
+  //   m1 += (p3 - p2) * (1 - bias) * (1 - tension) / 2;
+
+  //   a0 =  2 * mu3 - 3 * mu2 + 1;
+  //   a1 =  mu3 - 2 * mu2 + mu;
+  //   a2 =  mu3 - mu2;
+  //   a3 = - 2 * mu3 + 3 * mu2;
+
+  //  return a0 * p1 + a1 * m0 + a2 * m1 + a3 * p2;
+  // }
 
 }
