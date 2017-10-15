@@ -57,8 +57,10 @@ void main(){
 
   color = min(vec3(1.0), color);
 
-  float colorOffset = min(0.0, (vPos.x + vPos.y) / 2000.0);
-  color -= vec3(colorOffset) * vec3(-0.3, -1.0, 1.2);
+  float offsetColor2 = min(0.0, (vPos.x + vPos.y) / 2000.0);
+  color -= vec3(offsetColor2) * vec3(-0.3, -1.0, 1.2);
 
-  gl_FragColor = vec4(color + 0.1, 0.95);
+  color = min(vec3(1.0), color + 0.1);
+
+  gl_FragColor = vec4(color, 0.95);
 }

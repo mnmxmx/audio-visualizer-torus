@@ -17,8 +17,9 @@ The demo of audio visualizer using cubic interpolation.
   npm start  
 ```
 
-## How to play the music  
-* Open your local file from the upper left button "CHOOSE A MP3 FILE".
+## Thanks
+* The music : [Don't Talk About It](http://spoti.fi/2flLV1s)  
+by [Michael Mar](https://www.facebook.com/michaelmarmusic/), feat. [Kyan Palmer](https://www.facebook.com/kyanpalmer/)  
 
 
 

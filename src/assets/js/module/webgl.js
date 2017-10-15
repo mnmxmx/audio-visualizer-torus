@@ -146,7 +146,7 @@ class Webgl{
 
     var cameraZ = (this.props.height / 2) / Math.tan((this.props.fov * Math.PI / 180) / 2);
 
-    this.camera.position.set(0, -cameraZ/1.8, -cameraZ/5.0);
+    this.camera.position.set(0, -cameraZ/2, -cameraZ/7.0);
     
     this.camera.lookAt(this.scene.position);
 
