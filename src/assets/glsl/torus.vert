@@ -32,7 +32,7 @@ void main(){
 
   _position *= (1.0 + aFrequency);
 
-  _position -= offset;
+  _position += offset;
 
   _position.xy = calcRotate2D(time * 1.2) * _position.xy;
 

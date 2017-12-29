@@ -4,7 +4,7 @@ class Controls{
     this.props = {
       // start: 1,
       end: 900,
-      scaleSize: 2.7,
+      scaleSize: 3.6,
 
       isNo: false,
       isLinear: false,

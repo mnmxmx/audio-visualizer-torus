@@ -5,8 +5,8 @@ The demo of audio visualizer using cubic interpolation.
 
 * [demo](https://mnmxmx.github.io/audio-visualizer-torus/dst/)  
 * about [interpolation](http://paulbourke.net/miscellaneous/interpolation/)  
-[<img src="./screenshot1.png" width="50%">](./screenshot1.png) 
-[<img src="./screenshot2.png" width="50%">](./screenshot2.png) 
+[<img src="./screenshot1.png">](./screenshot1.png) 
+[<img src="./screenshot2.png">](./screenshot2.png) 
 
 ## Usage  
 * Clone repository  
