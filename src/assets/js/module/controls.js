@@ -3,8 +3,8 @@ class Controls{
     this.analyzer = analyzer;
     this.props = {
       // start: 1,
-      end: 900,
-      scaleSize: 3.6,
+      end: 600,
+      scaleSize: 4.0,
 
       isNo: false,
       isLinear: false,
